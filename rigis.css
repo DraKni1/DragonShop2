@@ -1,0 +1,323 @@
+/* Основные переменные (аналогичные вашему стилю) */
+:root {
+  --dragon-primary: #6c5ce7;
+  --dragon-secondary: #a29bfe;
+  --dragon-dark: #2d3436;
+  --dragon-light: #f5f6fa;
+  --dragon-danger: #d63031;
+  --dragon-text: #2d3436;
+  --dragon-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --dragon-transition: all 0.3s ease;
+}
+
+/* Сброс стилей и базовые настройки */
+.dragon-regis * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dragon-regis body {
+  background-color: var(--dragon-light);
+  color: var(--dragon-text);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Контейнер формы */
+.dragon-regis .regis-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--dragon-shadow);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Заголовок формы */
+.dragon-regis .regis-title {
+  text-align: center;
+  color: var(--dragon-primary);
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.dragon-regis .regis-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--dragon-secondary);
+  border-radius: 2px;
+}
+
+/* Группы полей формы */
+.dragon-regis .form-group {
+  margin-bottom: 1.8rem;
+}
+
+.dragon-regis .form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: var(--dragon-dark);
+  font-size: 1.05rem;
+}
+
+/* Поля ввода */
+.dragon-regis .form-control {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--dragon-transition);
+  background-color: #f9f9f9;
+}
+
+.dragon-regis .form-control:focus {
+  border-color: var(--dragon-primary);
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+/* Кнопка регистрации */
+.dragon-regis .regis-btn {
+  background: var(--dragon-primary);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--dragon-transition);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.dragon-regis .regis-btn:hover {
+  background: var(--dragon-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+}
+
+/* Ссылка на вход */
+.dragon-regis .login-link {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.dragon-regis .login-link a {
+  color: var(--dragon-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--dragon-transition);
+}
+
+.dragon-regis .login-link a:hover {
+  color: var(--dragon-secondary);
+  text-decoration: underline;
+}
+
+/* Сообщения об ошибках */
+.dragon-regis .error-message {
+  color: var(--dragon-danger);
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+/* Иконки в полях (дополнительно) */
+.dragon-regis .input-icon {
+  position: relative;
+}
+
+.dragon-regis .input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.dragon-regis .input-icon .form-control {
+  padding-left: 45px;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dragon-regis .regis-container {
+    margin: 2rem 1rem;
+    padding: 1.8rem;
+  }
+  
+  .dragon-regis .regis-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dragon-regis .form-control {
+    padding: 12px 15px;
+  }
+  
+  .dragon-regis .regis-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+}
+
+.dragon-regis .input-with-icon {
+  position: relative;
+}
+.dragon-regis .input-with-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dragon-primary);
+}
+.dragon-regis .input-with-icon input {
+  padding-left: 40px;
+}
+
+/* Исправления для шапки и подвала */
+.dragon-regis header {
+  background-color: var(--dragon-dark);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--dragon-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dragon-regis .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dragon-primary);
+}
+
+.dragon-regis nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.dragon-regis nav ul li a {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--dragon-transition);
+  color: white;
+}
+
+.dragon-regis nav ul li a:hover {
+  background-color: var(--dragon-primary);
+}
+
+.dragon-regis footer {
+  background-color: var(--dragon-dark);
+  color: white;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+}
+
+.dragon-regis .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center; /* Выравнивание по центру */
+}
+
+.dragon-regis .footer-section {
+  padding: 0 1rem;
+}
+
+.dragon-regis .footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dragon-primary);
+}
+
+.dragon-regis .footer-section p {
+  margin-bottom: 0.8rem;
+  color: #b2bec3;
+}
+
+.dragon-regis .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dragon-regis .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: var(--dragon-transition);
+  color: white;
+}
+
+/* Анимация формы при успешной регистрации */
+.regis-container {
+  transition: all 0.5s ease;
+}
+
+/* Стили для модального окна (если используете вариант 3) */
+.regis-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.regis-modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  animation: fadeInUp 0.5s ease;
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внутриигровые предметы | DragonShop</title>
+    <link rel="stylesheet" href="игр.css">
+    <link rel="stylesheet" href="items.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">DragonShop</div>
+        <nav>
+            <ul>
+                <li><a href="сайт.html">Главная</a></li>
+                <li><a href="сайт.html#games-section">Магазин</a></li>
+                <li><a href="items.html" class="active">Услуги</a></li>
+                <li><a href="sales.html">Распродажи</a></li>
+                <li><a href="suport.html">Поддержка</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="register.html" class="login">Войти</a>
+            <a href="card.html" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main class="items-main">
+        <h1>Внутриигровые предметы</h1>
+        
+        <!-- Фильтры -->
+        <div class="item-filters">
+            <button class="filter-btn active" data-category="all">Все</button>
+            <button class="filter-btn" data-category="currency">Валюта</button>
+            <button class="filter-btn" data-category="skins">Скины</button>
+            <button class="filter-btn" data-category="accounts">Аккаунты</button>
+            <button class="filter-btn" data-category="service">Пополнение</button>
+        </div>
+
+        <!-- Сетка товаров -->
+        <div class="items-grid">
+            <!-- Валюта -->
+            <div class="item-card" data-category="currency">
+                <img src="монеты.avif" alt="Золото" class="item-img">
+                <h3>Золото (3,150)</h3>
+                <p>World of Warcraft</p>
+                <div class="item-price">1350 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Скины -->
+            <div class="item-card" data-category="skins">
+                <img src="дракон.png" alt="Скин" class="item-img">
+                <h3>Скин "Дракон"</h3>
+                <p>CS:GO</p>
+                <div class="item-price">1,499 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Аккаунты -->
+            <div class="item-card" data-category="accounts">
+                <img src="форт.jpg" alt="Аккаунт" class="item-img">
+                <h3>Аккаунт Epic Games</h3>
+                <p>Fortnite + 20 скинов</p>
+                <div class="item-price">1,999 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+
+            <!-- Пополнение баланса -->
+            <div class="item-card" data-category="service">
+                <img src="пополнение.png" alt="услуга" class="item-img">
+                <h3>Пополнение баланса</h3>
+                <p>Steam 1р = 1.09</p>
+                <div class="item-price">10 - 10.000 ₽</div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал (по центру) -->
+    <footer class="centered-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>DragonShop — магазин игр и предметов с 2012 года</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>furyaka2007@mail.ru</p>
+                <p>+7 906 899 89 68</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Tg</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="items.js"></script>
+</body>
+</html>

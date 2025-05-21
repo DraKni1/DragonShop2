@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распродажи | DragonShop</title>
+    <link rel="stylesheet" href="игр.css">
+    <link rel="stylesheet" href="salo.css">
+
+    <!-- Базовый favicon (для старых браузеров) -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">DragonShop</div>
+        <nav>
+            <ul>
+                <li><a href="сайт.html">Главная</a></li>
+                <li><a href="#games-section">Магазин</a></li>
+                <li><a href="items.html">Услуги</a></li>
+                <li><a href="sales.html" class="active">Распродажи</a></li>
+                <li><a href="suport.html">Поддержка</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="register.html" class="login">Войти</a>
+            <a href="card.html" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    
+
+    <main>
+        <section class="sales-header">
+            <h1>Горячие распродажи</h1>
+            <p>Ограниченные предложения - скидки до 70%</p>
+            <div class="sale-timer">
+                <div class="timer-item">
+                    <span id="days">00</span>
+                    <span>дней</span>
+                </div>
+                <div class="timer-item">
+                    <span id="hours">00</span>
+                    <span>часов</span>
+                </div>
+                <div class="timer-item">
+                    <span id="minutes">00</span>
+                    <span>мин</span>
+                </div>
+                <div class="timer-item">
+                    <span id="seconds">00</span>
+                    <span>сек</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-games" id="sales-section">
+            <h2>Игры со скидкой</h2>
+            <div class="game-grid" id="discounted-games">
+                <!-- Игры будут добавляться через JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>DragonShop - крупнейший магазин игр с 2012 года</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>furyaka2007@mail.ru</p>
+                <p>+7 906 899 89 68</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Tg</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="user.js"></script>
+    <script src="js.sales.js"></script>
+</body>
+</html>

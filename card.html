@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Корзина - DragonShop</title>
+        <link rel="stylesheet" href="игр.css"> <!-- Основные стили сайта -->
+        <link rel="stylesheet" href="к корзине.css"> <!-- Только стили корзины -->
+
+        <!-- Базовый favicon (для старых браузеров) -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    </head>
+<body>
+    <header>
+        <div class="logo">DragonShop</div>
+        <nav>
+            <ul>
+                <li><a href="сайт.html">Главная</a></li>
+                <li><a href="#games-section">Магазин</a></li>
+                <li><a href="items.html">Услуги</a></li>
+                <li><a href="sales.html">Распродажи</a></li>
+                <li><a href="suport.html">Поддержка</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="register.html" class="login">Войти</a>
+            <a href="card.html" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    
+
+    <main class="cart-page">
+        <h1>Ваша корзина</h1>
+        <div class="cart-items">
+            <!-- Товары будут добавляться сюда -->
+        </div>
+        <div class="cart-summary">
+            <h3>Итого: <span class="total-price">0 ₽</span></h3>
+            <button class="checkout-button">Оформить заказ</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>DragonShop - крупнейший магазин игр с 2012 года</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>furyaka2007@mail.ru</p>
+                <p>+7 906 899 89 68</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Tg</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="user.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItems = document.querySelector('.cart-items');
+        const totalPrice = document.querySelector('.total-price');
+        
+        let total = 0;
+        
+        if (cart.length === 0) {
+            cartItems.innerHTML = `
+                <div class="empty-cart">
+                    <p>Ваша корзина пуста</p>
+                    <a href="сайт.html" class="back-to-shop">Вернуться в магазин</a>
+                </div>
+            `;
+        } else {
+            cart.forEach(item => {
+                const price = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+                total += price;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="item-info">
+                        <h3>${item.title}</h3>
+                        <span class="item-price">${item.price}</span>
+                    </div>
+                    <button class="remove-item" data-id="${item.id}">×</button>
+                `;
+                cartItems.appendChild(itemElement);
+            });
+            
+            totalPrice.textContent = `${total.toFixed(2)} ₽`;
+        }
+        
+        // Удаление товаров
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.dataset.id;
+                const newCart = cart.filter(item => item.id !== itemId);
+                localStorage.setItem('cart', JSON.stringify(newCart));
+                location.reload();
+            });
+        });
+        
+        // Оформление заказа
+        document.querySelector('.checkout-button')?.addEventListener('click', () => {
+            alert('Заказ оформлен! Спасибо за покупку!');
+            localStorage.removeItem('cart');
+            location.reload();
+        });
+    });
+</script>
+    
+</body>
+</html>

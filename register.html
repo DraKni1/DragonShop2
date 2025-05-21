@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | DragonShop</title>
+    <link rel="stylesheet" href="игр.css"> <!-- Основные стили сайта -->
+    <link rel="stylesheet" href="rigis.css"> <!-- Стили формы -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Базовый favicon (для старых браузеров) -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+<body class="dragon-regis">
+    <!-- Шапка (как на главной) -->
+    <header>
+        <div class="logo">DragonShop</div>
+        <nav>
+            <ul>
+                <li><a href="сайт.html">Главная</a></li>
+                <li><a href="#games-section">Магазин</a></li>
+                <li><a href="items.html">Услуги</a></li>
+                <li><a href="sales.html">Распродажи</a></li>
+                <li><a href="suport.html">Поддержка</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="login">Войти</a>
+            <a href="card.html" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    
+
+    <!-- Основной контент -->
+    <main style="min-height: calc(100vh - 400px); padding: 2rem 0;">
+        <div class="regis-container">
+            <h1 class="regis-title">Присоединяйтесь</h1>
+            <form id="regisForm">
+                <div class="form-group">
+                    <label for="username">Имя пользователя</label>
+                    <input type="text" id="username" class="form-control" required>
+                    <div class="error-message" id="username-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" class="form-control" required>
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                    <div class="error-message" id="confirm-error"></div>
+                </div>
+                
+                <button type="submit" class="regis-btn">Создать аккаунт</button>
+                
+                <div class="login-link">
+                    Уже есть аккаунт? <a href="login.html">Войти</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Подвал (как на главной) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>DragonShop - крупнейший магазин игр с 2012 года</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>furyaka2007@mail.ru</p>
+                <p>+7 906 899 89 68</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Tg</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Общий скрипт для корзины -->
+     
+    <script src="user.js"></script>
+</body>
+</html>

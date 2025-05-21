@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка | DragonShop</title>
+    <link rel="stylesheet" href="игр.css">
+    <link rel="stylesheet" href="sapik.css">
+
+    <!-- Базовый favicon (для старых браузеров) -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">DragonShop</div>
+        <nav>
+            <ul>
+                <li><a href="сайт.html">Главная</a></li>
+                <li><a href="#games-section">Магазин</a></li>
+                <li><a href="items.html">Услуги</a></li>
+                <li><a href="sales.html">Распродажи</a></li>
+                <li><a href="suport.html" class="active">Поддержка</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="register.html" class="login">Войти</a>
+            <a href="card.html" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    
+
+    <main class="support-main">
+        <section class="support-hero">
+            <h1>Центр поддержки DragonShop</h1>
+            <p>Мы всегда готовы помочь вам с любыми вопросами</p>
+        </section>
+
+        <section class="support-options">
+            <div class="support-card">
+                <div class="support-icon">📧</div>
+                <h3>Электронная почта</h3>
+                <p>Напишите нам на почту, и мы ответим в течение 24 часов</p>
+                <a href="mailto:support@dragonshop.ru" class="support-button">Написать</a>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">💬</div>
+                <h3>Онлайн-чат</h3>
+                <p>Чат с поддержкой доступен с 9:00 до 21:00 по МСК</p>
+                <button class="support-button" id="open-chat">Открыть чат</button>
+            </div>
+
+            <div class="support-card">
+                <div class="support-icon">📞</div>
+                <h3>Телефон</h3>
+                <p>Звоните нам с 10:00 до 18:00 по МСК</p>
+                <a href="tel:+79068998968" class="support-button">+7 906 899 89 68</a>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Как оформить возврат товара?</button>
+                    <div class="faq-answer">
+                        <p>Вы можете оформить возврат в течение 14 дней после получения товара. Для этого напишите нам на почту с указанием номера заказа и причины возврата.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Как активировать купленную игру?</button>
+                    <div class="faq-answer">
+                        <p>После оплаты вы получите ключ активации на почту. Для активации в Steam: откройте Steam → "Активировать через Steam" → "Ввести ключ продукта".</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Какие способы оплаты доступны?</button>
+                    <div class="faq-answer">
+                        <p>Мы принимаем: банковские карты (Visa, Mastercard, МИР), QIWI, Яндекс.Деньги, WebMoney и криптовалюту (Bitcoin, Ethereum).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Форма обратной связи</h2>
+            <form id="supportForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Тема</label>
+                    <select id="subject" required>
+                        <option value="">Выберите тему</option>
+                        <option value="payment">Проблема с оплатой</option>
+                        <option value="game">Проблема с игрой</option>
+                        <option value="account">Аккаунт</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О нас</h3>
+                <p>DragonShop - крупнейший магазин игр с 2012 года</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>furyaka2007@mail.ru</p>
+                <p>+7 906 899 89 68</p>
+            </div>
+            <div class="footer-section">
+                <h3>Соцсети</h3>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Tg</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="user.js"></script>
+    <script src="supi.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+.cart-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.cart-items {
+  margin: 2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 100%; /* Увеличили ширину */
+  height: 150px; /* Увеличили высоту */
+  object-fit: cover; /* Сохраняем пропорции */
+  margin-right: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .cart-item img {
+      width: 100%;
+      height: 150px;
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #d63031;
+}
+
+.cart-summary {
+  text-align: right;
+  padding: 1rem;
+  background: #f5f6fa;
+  border-radius: 8px;
+}
+
+.checkout-button {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Основные переменные (можно вынести в отдельный файл или оставить здесь) */
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #a29bfe;
+  --dark-color: #2d3436;
+  --light-color: #f5f6fa;
+  --danger-color: #d63031;
+  --text-color: #2d3436;
+  --text-light: #636e72;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Общие стили (как на главной, но только необходимые) */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+ 
+
+/* Стили корзины (аналогичные предыдущему варианту) */
+.cart-page {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  min-height: 60vh;
+}
+
+.cart-page h1 {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.cart-page h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-color);
+}
+
+.cart-items {
+  margin: 3rem 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* Остальные стили корзины... */
+
+/* Стили для футера (подвала) */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.footer-section p {
+  margin-bottom: 0.8rem;
+  color: #b2bec3;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: var(--transition);
+  color: white;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+
+/* Стили для карточек товаров в корзине */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #000; /* Черная обводка */
+    border-radius: 8px; /* Закругленные углы */
+    margin-bottom: 1rem; /* Отступ между товарами */
+    background: white;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 3px solid #000; /* Более толстая обводка */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.cart-item:hover {
+    border-color: var(--primary-color); /* При наведении обводка меняет цвет */
+    transform: translateY(-3px);
+}
+
+/* Убираем нижний отступ у последнего товара */
+.cart-item:last-child {
+    margin-bottom: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: rgb(212, 212, 212);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+
+
+.cart-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .cart-item img {
+      width: 100%;
+      height: 150px;
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+}
+.cart-item img {
+  width: 100px;
+  height: 100px; /* Сделать высоту равной ширине */
+}
+.cart-item img {
+  width: 260px;
+  height: 150px;
+}
+.cart-item img {
+  transition: transform 0.3s ease;
+}
+.cart-item img:hover {
+  transform: scale(1.05);
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+}
+
+.empty-cart p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.back-to-shop {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.back-to-shop:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background-color: var(--danger-color);
+}
+
+img[alt="Assassin's Creed II"] {
+    margin-right: 25px; /* Компенсируем сдвиг */
+    object-position: 0px 50%; /* Точное позиционирование */
+}
+
+
